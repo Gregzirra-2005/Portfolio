@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: navy;
+    background-image: url(picture/background3.jpg);
+    background-size: 50% 20%, 100%;
+    color: beige;
+}
+
+.left {
+    border: 1px solid white;
+    /* display: flex; */
+    flex-direction: column;
+    position: absolute;
+    left: 8px;
+    top: 90px;
+    width: 100px;
+    height: 70px;
+    padding-top: 20px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    /* background-color: transparent; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: beige;
+    text-decoration: none;
+    font-weight: 600;
+    pointer-events: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.left a {
+    text-decoration: none;
+    color: rgb(80, 83, 248);
+}
+
+.left a:hover {
+    color: aqua;
+    font-size: large;
+    transition: 0.5s;
+}
+
+.navbar a:hover {
+    background: linear-gradient(45deg, rgb(25rgb(255, 255, 255)224, 220, 228));
+    font-size: large;
+    -webkit-text-fill-color: transparent;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+
+
+@media screen and (min-width: 900px){
+.home-content {
+    max-width: 500px;
+    margin-left: 30px;
+}
+}
+
+.home-content h1 {
+    opacity: 0;
+    font-size: 56px;
+    font-weight: 700px;
+    line-height: 1.72;
+    animation: dropIn 5s ease-in-out forwards, fadeIn 5s ease-in-out forwards;
+}
+@keyframes dropIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700px;
+    animation: dropIn 2s ease-in-out forwards, fadeIn 2s ease-in-out forwards;
+
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    animation: dropIn 2s ease-in-out forwards, fadeIn 2s ease-in-out forwards;
+
+}
+
+.btn {
+    /* border: 1px solid yellowgreen; */
+    background-color: transparent;
+    display: inline-block;
+    align-items: center;
+    text-decoration: none;
+    color: cyan;
+    border-radius: 15px;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    animation: floating 5s ease-out;
+    box-shadow: 0px 2px 10px 0px #2b840e, 0 0 10px #020963;
+}
+.btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    animation: forwards 1s ;
+}
+                                                                /* Floating Image */
+.floating-image {
+    border: 2px groove white;
+    box-shadow: 0 2px 10px rgba(255, 227, 16, 0.5);
+    width: 300px;
+    height: 300px;
+    margin-left: 190px;
+    border-radius: 150px;
+    background-image: url(backgroud3.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: 100;
+    animation: floating 3s ease-in-out infinite;
+    /* transition: -webkit-transform 1s ease-in-out; */
+}
+
+/* .floating-image:hover {
+    -webkit-transform: rotateY(180deg);
+} */
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+.skill a i {
+    font-size: 80px;
+    margin-right: 50px;
+}
+
+footer {
+    border-radius: 5px 5px 0 0;
+    background-color: rgb(9, 9, 41);
+    box-shadow: 1px 0px 2px #fff;
+} 
+
+.skill a i:hover {
+    font-size: 85px;
+    color: rgb(169, 172, 229);
+}
+
+.abt-image {
+    border: 2px groove white;
+    box-shadow: 0 2px 10px rgba(255, 227, 16, 0.5);
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    margin-left: 100px;
+    margin-bottom: 60px;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.about {
+    border: 0px solid white;
+    width: 50%;
+    margin-top: -250px;
+    margin-left: 450px;
+    flex-direction: row;
+    float: left;
+}
+
+.linkk {
+    border: 0px solid white;
+    width: 20%;
+    margin: 0 auto;
+}
+
+.link a {
+    left: 100px;
+    padding-left: 20px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+.link a:hover {
+    color: aqua;
+    font-size: 25px;
+}
+
+.font {
+    background-color: #020231;
+    margin: 0 auto;
+    width: 50%;
+    height: 60vh;
+    box-shadow: 0px 2px 5px rgba(203, 205, 207, 0.941);
+    border-radius: 15px;
+}
+
+.font a {
+    top: 200px;
+}
